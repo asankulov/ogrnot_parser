@@ -36,7 +36,7 @@ class OgrnotHtml
     keys.each_pair do |key, value|
       result.each do |x|
         if key == x[0]
-          final[key] = value << x[1..-1]
+          final[key] = value << x[1..-1].join(': ')
         end
       end
     end
