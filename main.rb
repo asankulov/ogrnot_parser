@@ -30,7 +30,11 @@ Telegram::Bot::Client.run(TOKEN) do |bot|
         if (message.message_id.to_i - smsId2.to_i) == 2
           pass = message.text
           org = OgrnotHtml.new
-          org.save_html(login, pass)
+          if (org.save_html(login, pass)=="Fuck! Undefined method!")
+            bot.api.send_message(chat_id: message.chat.id, text: 'логин или пароль не верны, введите заново!/ogr')
+            next
+          end
+
           res = org.parser
           not_message = ''
           res.each_pair do |key, value|
