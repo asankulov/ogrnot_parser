@@ -34,7 +34,7 @@ Telegram::Bot::Client.run(TOKEN) do |bot|
           res = org.parser
           not_message = ''
           res.each_pair do |key, value|
-            not_message += '|' + key + '|' + "\n" + value.join("\n") + "\n"
+            not_message += '|' + key + '|' + "\n" + value.join("\n") + "\n\n"
           end
           last_char = message.from.last_name.to_s[-1]
           if last_char == 'a' || last_char == 'а'
