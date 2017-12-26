@@ -66,6 +66,6 @@ class OgrnotHtml
       f.puts browser.html
     end
     browser.button(:name => 'frm_cikis').click
-    return "successful"
+    "successful"
   end
 end
