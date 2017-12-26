@@ -40,7 +40,7 @@ class OgrnotHtml
         end
       end
     end
-    final.invert
+    final
   end
 
   def save_html(username, password)
