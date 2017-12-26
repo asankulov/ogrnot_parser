@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+<<<<<<< HEAD
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
@@ -21,10 +22,38 @@ GEM
     multipart-post (2.0.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
+=======
+    childprocess (0.8.0)
+      ffi (~> 1.0, >= 1.0.11)
+    domain_name (0.5.20170404)
+      unf (>= 0.0.5, < 1.0.0)
+    ffi (1.9.18)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
+    mechanize (2.7.5)
+      domain_name (~> 0.5, >= 0.5.1)
+      http-cookie (~> 1.0)
+      mime-types (>= 1.17.2)
+      net-http-digest_auth (~> 1.1, >= 1.1.1)
+      net-http-persistent (~> 2.5, >= 2.5.2)
+      nokogiri (~> 1.6)
+      ntlm-http (~> 0.1, >= 0.1.1)
+      webrobots (>= 0.0.9, < 0.2)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
+    mini_portile2 (2.3.0)
+    net-http-digest_auth (1.4.1)
+    net-http-persistent (2.9.4)
+    nokogiri (1.8.1)
+      mini_portile2 (~> 2.3.0)
+    ntlm-http (0.1.1)
+>>>>>>> origin/master
     rubyzip (1.2.1)
     selenium-webdriver (3.8.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
+<<<<<<< HEAD
     telegram-bot-ruby (0.8.6.1)
       faraday
       inflecto
@@ -37,13 +66,26 @@ GEM
       equalizer (~> 0.0, >= 0.0.9)
     watir (6.10.1)
       selenium-webdriver (~> 3.4, >= 3.4.1)
+=======
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.4)
+    watir (6.10.1)
+      selenium-webdriver (~> 3.4, >= 3.4.1)
+    webrobots (0.1.2)
+>>>>>>> origin/master
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+<<<<<<< HEAD
   nokogiri
   telegram-bot-ruby
+=======
+  mechanize
+  nokogiri
+>>>>>>> origin/master
   watir
 
 RUBY VERSION

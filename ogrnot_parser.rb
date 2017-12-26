@@ -64,6 +64,3 @@ class OgrnotHtml
     browser.button(:name => 'frm_cikis').click
   end
 end
-
-# OgrnotHtml.new.save_html('1404.01016', '1')
-OgrnotHtml.new.parser
