@@ -56,11 +56,16 @@ class OgrnotHtml
     browser.input(:name => 'frm_sifre').to_subtype.clear
     browser.input(:name => 'frm_sifre').send_keys password
     browser.input(:value => ' Giriş ').click
-    browser.button(:name => 'frm_not').click
 
+    begin
+      browser.button(:name => 'frm_not').click
+    rescue
+      return  "Fuck! Undefined method!"
+    end
     open('ogrnot.html', 'w') do |f|
       f.puts browser.html
     end
     browser.button(:name => 'frm_cikis').click
+    "successful"
   end
 end
