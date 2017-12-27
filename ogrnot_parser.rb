@@ -47,7 +47,7 @@ class OgrnotHtml
 
     Selenium::WebDriver::Chrome.driver_path = Dir.pwd + '/.chromedriver/bin/chromedriver'
 
-    browser = Watir::Browser.new :chrome, headless: true, disable_gpu: false
+    browser = Watir::Browser.new :chrome
     browser.goto('http://ogrnot.manas.edu.kg/')
 
 
