@@ -69,4 +69,3 @@ class OgrnotHtml
     "successful"
   end
 end
-OgrnotHtml.new.save_html '1404.01016', '1'
