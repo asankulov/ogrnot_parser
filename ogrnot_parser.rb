@@ -45,9 +45,9 @@ class OgrnotHtml
 
   def save_html(username, password)
 
-    Selenium::WebDriver::Chrome.driver_path = Dir.pwd + '/.chromedriver/bin/chromedriver'
+    # Selenium::WebDriver::Chrome.driver_path = Dir.pwd + '/.chromedriver/bin/chromedriver'
     Selenium::WebDriver::Chrome.path = Dir.pwd + '/.apt/usr/bin/google-chrome'
-    browser = Watir::Browser.new :chrome
+    browser = Watir::Browser.new.driver Dir.pwd + '/.chromedriver/bin/chromedriver'
     browser.goto('http://ogrnot.manas.edu.kg/')
 
 
