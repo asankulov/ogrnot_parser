@@ -46,7 +46,7 @@ Telegram::Bot::Client.run(TOKEN) do |bot|
           else
             pref = "Дорогой"
           end
-          bot.api.send_message(chat_id: message.chat.id, text: "#{pref} , #{message.from.first_name} твои баллы: \n\n#{not_message}")
+          bot.api.send_message(chat_id: message.chat.id, text: "#{pref}, #{message.from.first_name} твои баллы: \n\n#{not_message}")
         end
     end
   end
