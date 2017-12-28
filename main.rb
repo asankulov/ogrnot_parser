@@ -2,7 +2,7 @@ require 'telegram/bot'
 require_relative 'ogrnot_parser.rb'
 
 
-TOKEN = '505850883:AAES4Ri6DIn4FY7sWO5neFa55R8N82bsTPM'
+TOKEN = 'TOKEN'
 smsId2 = smsId = 0
 login = pass = ''
 
