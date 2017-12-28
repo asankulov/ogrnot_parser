@@ -3,11 +3,14 @@ require 'nokogiri'
 require 'open-uri'
 
 class OgrnotHtml
+  attr_accessor :page
+
+  def initialize
+    @page
+  end
 
   def parser
-    url = 'ogrnot.html'
-    html = open(url)
-    doc = Nokogiri::HTML(html, nil, 'utf-8')
+    doc = Nokogiri::HTML(@page, nil, 'utf-8')
 
     courses = []
     grades = []
@@ -45,9 +48,9 @@ class OgrnotHtml
 
   def save_html(username, password)
 
-    Selenium::WebDriver::Chrome.driver_path = Dir.pwd + '/.chromedriver/bin/chromedriver'
-    Selenium::WebDriver::Chrome.path = Dir.pwd + '/.apt/usr/bin/google-chrome'
-    browser = Watir::Browser.new :chrome
+    Selenium::WebDriver::Chrome.driver_path = Dir.pwd + '/browsers/chromedriver'
+    # Selenium::WebDriver::Chrome.path = Dir.pwd + '/.apt/usr/bin/google-chrome'
+    browser = Watir::Browser.new :chrome, headless: true
     browser.goto('http://ogrnot.manas.edu.kg/')
 
 
@@ -62,10 +65,11 @@ class OgrnotHtml
     rescue
       return  "Fuck! Undefined method!"
     end
-    open('ogrnot.html', 'w') do |f|
-      f.puts browser.html
-    end
+    @page = browser.html
     browser.button(:name => 'frm_cikis').click
     "successful"
   end
 end
+# ogrnot = OgrnotHtml.new
+# ogrnot.save_html '1404.01016', '1'
+# ogrnot.parser
